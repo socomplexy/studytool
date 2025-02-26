@@ -1,37 +1,24 @@
-import { useState } from "react";
-import { simpleConversion } from "./molarityCalculation";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  CardContent,
+  Divider,
+  Typography,
+} from "@mui/material";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
-import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Divider from "@mui/material/Divider";
 
-export const Molarity = ({}) => {
-  const [calculation, setCalculation] = useState(simpleConversion());
-  const getNewCalculation = () => {
-    toggleHintVisible(false);
-    toggleAnswerVisible(false);
-    setCalculation(simpleConversion());
-  };
-
-  const [hintVisible, setHintVisible] = useState(false);
-  const toggleHintVisible = (status) => setHintVisible(status ?? !hintVisible);
-
-  const [answerVisible, setAnswerVisible] = useState(false);
-  const toggleAnswerVisible = (status) =>
-    setAnswerVisible(status ?? !answerVisible);
-
+export const MolarityPracticeEasy = ({
+  answerVisible,
+  calculation,
+  hintVisible,
+  newCalculation,
+  toggleAnswerVisible,
+  toggleHintVisible,
+}) => {
   return (
-    <div className="view-wrapper">
-      <Box sx={{ width: "100%", maxWidth: 500 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Molarity Calculations
-        </Typography>
-      </Box>
+    <div style={{ paddingTop: 30 }}>
       <ButtonGroup color="secondary">
         <Button
           variant="outlined"
@@ -46,13 +33,13 @@ export const Molarity = ({}) => {
         <Button
           variant="outlined"
           endIcon={<SkipNextIcon />}
-          onClick={getNewCalculation}
+          onClick={newCalculation}
         >
           Next
         </Button>
       </ButtonGroup>
 
-      <Card variant="outlined" sx={{ marginTop: 5 }}>
+      <Card variant="outlined" sx={{ marginTop: 2 }}>
         <CardContent>
           <Typography variant="h5" component="h2" gutterBottom>
             {calculation ? (
@@ -74,7 +61,7 @@ export const Molarity = ({}) => {
           ) : null}
           {answerVisible ? (
             <>
-              <Divider sx={{ marginTop: 5, marginBottom: 5 }} />
+              <Divider sx={{ marginTop: 2, marginBottom: 2 }} />
               <Typography variant="h4" color="error" gutterBottom>
                 {calculation ? (
                   <span

@@ -4,6 +4,7 @@ import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
+import HubIcon from "@mui/icons-material/Hub";
 import Home from "@mui/icons-material/Home";
 import Calculate from "@mui/icons-material/Calculate";
 
@@ -28,11 +29,17 @@ export const Menu = ({ isOpen, onClick }) => {
               </ListItemIcon>
               <ListItemText>Home</ListItemText>
             </MenuItem>
-            <MenuItem onClick={() => onClick("Molarity")}>
+            <MenuItem onClick={() => onClick("MolarityPractice")}>
               <ListItemIcon>
                 <Calculate fontSize="small" />
               </ListItemIcon>
               <ListItemText>Molarity Conversion</ListItemText>
+            </MenuItem>
+            <MenuItem onClick={() => onClick("MoleculeGenerator")}>
+              <ListItemIcon>
+                <HubIcon fontSize="small" />
+              </ListItemIcon>
+              <ListItemText>Molecule Generator</ListItemText>
             </MenuItem>
           </MenuList>
         </Paper>

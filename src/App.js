@@ -4,7 +4,7 @@ import { Components } from "./Components";
 import { Views } from "./Views";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const toggleIsOpen = (status) => setIsOpen(status);
 
   const [view, setView] = useState("Home");
@@ -18,7 +18,8 @@ function App() {
       <Components.Header onClick={toggleIsOpen} isOpen={isOpen} />
       <Components.Menu isOpen={isOpen} onClick={updateView} />
       {view === "Home" ? <Views.Home /> : null}
-      {view === "Molarity" ? <Views.Molarity /> : null}
+      {view === "MoleculeGenerator" ? <Views.MoleculeGenerator /> : null}
+      {view === "MolarityPractice" ? <Views.MolarityPractice /> : null}
     </div>
   );
 }
