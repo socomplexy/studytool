@@ -75,7 +75,7 @@ const getAdvancedExplanation = ({
     } / ${calculation[secondProvidedInfo]} = ${formatVolume(
             calculation[randomNeeded]
           )}</strong>.</li>`
-        : `<li>To calculate concentration, we need to use the equation <strong>C=n/V</strong>, rearranged to <strong>V=n/C</strong>, where C=concentration, n=number of moles and V=volume. We have the concentration, but we don't have the number of moles yet.</li>
+        : `<li>To calculate volume, we need to use the equation <strong>C=n/V</strong>, rearranged to <strong>V=n/C</strong>, where C=concentration, n=number of moles and V=volume. We have the concentration, but we don't have the number of moles yet.</li>
     <li>Instead, we will need to first use <strong>n=m/GFM</strong>, where m=mass, n=number of moles and GFM is Gram Formula Mass to get that information.</li>
     <li>We know the Gram Formula Mass for ${
       calculation.substance.displayKey
