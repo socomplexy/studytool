@@ -35,7 +35,7 @@ export const MolarityPractice = ({}) => {
     <div className="view-wrapper">
       <Box sx={{ width: "100%", maxWidth: 500 }}>
         <Typography variant="h5" component="h1" gutterBottom>
-          Molarity Practice
+          Molarity Conversion Practice
         </Typography>
       </Box>
 

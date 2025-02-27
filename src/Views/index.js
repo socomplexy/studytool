@@ -1,9 +1,13 @@
 import { Home } from "./Home";
-import { MoleculeGenerator } from "./MoleculeGenerator";
+import { MolarityConversion } from "./MolarityConversion";
 import { MolarityPractice } from "./MolarityPractice";
+import { MoleculeGenerator } from "./MoleculeGenerator";
+import { UnderstandingMolarity } from "./UnderstandingMolarity";
 
 export const Views = {
   Home,
-  MoleculeGenerator,
+  MolarityConversion,
   MolarityPractice,
+  MoleculeGenerator,
+  UnderstandingMolarity,
 };

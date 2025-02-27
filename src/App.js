@@ -18,8 +18,12 @@ function App() {
       <Components.Header onClick={toggleIsOpen} isOpen={isOpen} />
       <Components.Menu isOpen={isOpen} onClick={updateView} />
       {view === "Home" ? <Views.Home /> : null}
-      {view === "MoleculeGenerator" ? <Views.MoleculeGenerator /> : null}
+      {view === "MolarityConversion" ? <Views.MolarityConversion /> : null}
       {view === "MolarityPractice" ? <Views.MolarityPractice /> : null}
+      {view === "MoleculeGenerator" ? <Views.MoleculeGenerator /> : null}
+      {view === "UnderstandingMolarity" ? (
+        <Views.UnderstandingMolarity updateView={updateView} />
+      ) : null}
     </div>
   );
 }
