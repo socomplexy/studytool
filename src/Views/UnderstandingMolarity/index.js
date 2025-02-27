@@ -22,8 +22,7 @@ export const UnderstandingMolarity = ({ updateView }) => {
       <Card sx={{ maxWidth: 500 }}>
         <CardMedia
           sx={{ height: 140 }}
-          image="./static/images/cards/chemistry.jpg"
-          title="green iguana"
+          image="https://plus.unsplash.com/premium_photo-1661603887154-cb5f58a51768?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
