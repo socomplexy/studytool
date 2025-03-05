@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./Styles/App.scss";
 import { Components } from "./Components";
 import { Views } from "./Views";
@@ -15,15 +16,45 @@ function App() {
 
   return (
     <div className="App">
-      <Components.Header onClick={toggleIsOpen} isOpen={isOpen} />
-      <Components.Menu isOpen={isOpen} onClick={updateView} />
-      {view === "Home" ? <Views.Home /> : null}
-      {view === "MolarityConversion" ? <Views.MolarityConversion /> : null}
-      {view === "MolarityPractice" ? <Views.MolarityPractice /> : null}
-      {view === "MoleculeGenerator" ? <Views.MoleculeGenerator /> : null}
-      {view === "UnderstandingMolarity" ? (
-        <Views.UnderstandingMolarity updateView={updateView} />
-      ) : null}
+      <Router>
+        {/* <Components.Header onClick={toggleIsOpen} isOpen={isOpen} /> */}
+        <Components.AppBar />
+        <Routes>
+          <Route path="/base-practice" element={<Views.DNABasePractice />} />
+          <Route path="/genetics" element={<Views.Genetics />} />
+          <Route path="/molarity" element={<Views.Molarity />} />
+          <Route
+            path="/understanding-molarity"
+            element={<Views.UnderstandingMolarity />}
+          />
+          <Route
+            path="/molarity-practice"
+            element={<Views.MolarityPractice />}
+          />
+
+          <Route
+            path="/EquationPractice"
+            element={<Views.EquationPractice />}
+          />
+          <Route
+            path="/MolarityConversion"
+            element={<Views.MolarityConversion />}
+          />
+          <Route
+            path="/MoleculeGenerator"
+            element={<Views.MoleculeGenerator />}
+          />
+          <Route
+            path="/PedigreePractice"
+            element={<Views.PedigreePractice />}
+          />
+          <Route
+            path="/PunnettSquarePractice"
+            element={<Views.PunnettSquarePractice />}
+          />
+          <Route path="/" element={<Views.Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

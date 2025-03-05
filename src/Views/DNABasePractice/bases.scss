@@ -1,0 +1,51 @@
+.dna-base-pairs {
+  display: flex;
+  margin-top: 5px;
+}
+
+.dna-bases {
+  line-height: 1.8;
+  width: 40px;
+  padding: 2px 5px;
+  color: white;
+  font-weight: 600;
+  &.right {
+    text-align: right;
+  }
+  &.a-base {
+    mask: radial-gradient(10px 50% at right, #0000 calc(100% - 1px), #000);
+    background-color: #2196f3;
+    &.right {
+      mask: radial-gradient(10px 50% at left, #0000 calc(100% - 1px), #000);
+    }
+  }
+  &.t-base,
+  &.u-base {
+    border-radius: 0 15px 15px 0;
+    background-color: #aa3815;
+    &.right {
+      border-radius: 15px 0 0 15px;
+    }
+  }
+  &.c-base {
+    background-color: #0097a7;
+    padding-inline: 0.3em calc(var(20px) + 0.3em);
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0,
+      100% 50%,
+      calc(100% - 20px) 100%,
+      0 100%
+    );
+    &.right {
+      clip-path: polygon(100% 100%, 20px 100%, 0 50%, 20px 0, 100% 0);
+    }
+  }
+  &.g-base {
+    background-color: #df487f;
+    clip-path: polygon(100% 100%, 0 100%, 0 0, 100% 0, 30px 50%);
+    &.right {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 20px 50%);
+    }
+  }
+}

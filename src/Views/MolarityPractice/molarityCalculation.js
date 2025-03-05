@@ -1,4 +1,5 @@
 import { Utils } from "../../utils";
+import { Data } from "../../data";
 
 const units = {
   concentration: "M",
@@ -10,13 +11,13 @@ const units = {
 };
 
 export const simpleConversion = () => {
-  const substance = Utils.getRandomSelection(Utils.substances);
+  const substance = Utils.getRandomSelection(Data.substances);
   const mass = parseFloat((Utils.getRandomInt(1000) / 10).toFixed(4));
-  const moles = parseFloat((mass / substance.atomicMass.total).toFixed(4));
+  const moles = parseFloat((mass / substance.totalMass).toFixed(4));
   const volume = Utils.getRandomInt(50) / 10;
   const volumeMils = volume < 1 ? volume * 1000 : null;
   const concentration = parseFloat((moles / volume).toFixed(4));
-  const gfm = substance.atomicMass.total;
+  const gfm = substance.totalMass;
 
   const result = {
     substance,
@@ -27,9 +28,9 @@ export const simpleConversion = () => {
     concentration,
     gfm,
     question: `How many moles are there in ${mass} grams of ${substance.name} (${substance.displayKey})?`,
-    hint: `The formula mass for ${substance.displayKey} is ${substance.atomicMass.total}.`,
+    hint: `The formula mass for ${substance.displayKey} is ${substance.totalMass}.`,
     answer: `${moles} moles (to 2 d.p.)`,
-    explanation: `To find the number of moles, we must divide the substance weight by the atomic mass. In this case, that gives us ${mass} / ${substance.atomicMass.total} = ${moles} moles.`,
+    explanation: `To find the number of moles, we must divide the substance weight by the atomic mass. In this case, that gives us ${mass} / ${substance.totalMass} = ${moles} moles.`,
   };
 
   return result;

@@ -33,26 +33,29 @@ export const MolarityPractice = ({}) => {
 
   return (
     <div className="view-wrapper">
-      <Box sx={{ width: "100%", maxWidth: 500 }}>
-        <Typography variant="h5" component="h1" gutterBottom>
-          Molarity Conversion Practice
-        </Typography>
-      </Box>
-
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs value={practiceLevel}>
-            <Tab label="Easy" onClick={() => updatePracticeLevel(0)} />
-            <Tab label="Harder" onClick={() => updatePracticeLevel(1)} />
-          </Tabs>
+      <div className="banner molarity-banner">
+        <div className="content-wrapper">
+          <Typography variant="h1" color="#e3f2fd" gutterBottom>
+            Molarity Practice
+          </Typography>
+        </div>
+      </div>
+      <div className="content-wrapper">
+        <Box sx={{ width: "100%" }}>
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Tabs value={practiceLevel}>
+              <Tab label="Easy" onClick={() => updatePracticeLevel(0)} />
+              <Tab label="Harder" onClick={() => updatePracticeLevel(1)} />
+            </Tabs>
+          </Box>
+          {practiceLevel === 0 ? (
+            <MolarityPracticeEasy {...practiceProps} />
+          ) : null}
+          {practiceLevel === 1 ? (
+            <MolarityPracticeHard {...practiceProps} />
+          ) : null}
         </Box>
-        {practiceLevel === 0 ? (
-          <MolarityPracticeEasy {...practiceProps} />
-        ) : null}
-        {practiceLevel === 1 ? (
-          <MolarityPracticeHard {...practiceProps} />
-        ) : null}
-      </Box>
+      </div>
     </div>
   );
 };

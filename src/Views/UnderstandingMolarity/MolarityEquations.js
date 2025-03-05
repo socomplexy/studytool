@@ -7,7 +7,7 @@ export const MolarityEquations = ({}) => {
   };
   return (
     <Box sx={{ mt: 3 }}>
-      <Typography variant="h4" component="div" gutterBottom>
+      <Typography variant="h4" component="h3" gutterBottom>
         Important equations
       </Typography>
       <Typography sx={{ mb: 1.5 }}>

@@ -1,12 +1,63 @@
 .view-wrapper {
-  padding: 50px 20px 20px;
+}
+.content-wrapper {
   max-width: 800px;
   margin: auto;
+  padding: 20px;
+}
+.banner {
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+  @media (max-width: 500px) {
+    height: 200px;
+  }
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+  h1 {
+    text-shadow: 3px 3px 3px gray;
+  }
+  &.home-banner {
+    background: url("../../public/images/study.jpg");
+    background-size: cover;
+  }
+  &.genetics-banner {
+    background: url("../../public/images/genetics.jpg");
+    background-size: cover;
+  }
+  &.molarity-banner {
+    background: url("../../public/images/chemistry.jpg");
+    background-size: cover;
+  }
+  .content-wrapper {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 100%;
+  }
 }
 .option-wrapper {
   padding: 20px;
   border-bottom: 1px solid gray;
   button {
     margin-top: 20px;
+  }
+}
+
+h1 {
+  @media (max-width: 700px) {
+    font-size: 3.5rem !important;
+  }
+  @media (max-width: 400px) {
+    font-size: 2.5rem !important;
+  }
+}
+h2 {
+  @media (max-width: 700px) {
+    font-size: 2.25rem !important;
+  }
+  @media (max-width: 400px) {
+    font-size: 1.75rem !important;
   }
 }

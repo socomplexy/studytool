@@ -1,9 +1,7 @@
 import { Drawer } from "./Drawer";
-import { Header } from "./Header";
-import { Menu } from "./Menu";
+import { AppBar } from "./AppBar";
 
 export const Components = {
   Drawer,
-  Header,
-  Menu,
+  AppBar,
 };
