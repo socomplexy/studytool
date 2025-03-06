@@ -48,7 +48,7 @@ const Inner = ({ isLargeScreen, handleNavOpen }) => {
 function App() {
   const { width } = Utils.useWindowDimensions();
   const isLargeScreen = width > 1000;
-  const [navOpen, setNavOpen] = useState(true);
+  const [navOpen, setNavOpen] = useState(false);
   const handleNavClose = () => setNavOpen(false);
   const handleNavOpen = () => setNavOpen(true);
 
