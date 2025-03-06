@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-export const Home = ({}) => {
+export const Home = ({ isLargeScreen, MenuIcon }) => {
   const listItemProps = {
     component: Link,
     style: { textDecoration: "none" },
@@ -15,6 +15,7 @@ export const Home = ({}) => {
 
   return (
     <div className="view-wrapper">
+      {!isLargeScreen ? MenuIcon : null}
       <div className="banner home-banner">
         <div className="content-wrapper">
           <Typography variant="h1" color="text.primary" gutterBottom>
@@ -59,7 +60,7 @@ export const Home = ({}) => {
               secondary="Practice calculating molarities!"
             />
           </ListItem>
-          <Divider variant="inset" component="li" />
+          {/* <Divider variant="inset" component="li" />
           <ListItem {...listItemProps} to="/genetics">
             <ListItemText
               primary="Genetics"
@@ -72,7 +73,7 @@ export const Home = ({}) => {
               primary="DNA Base Pairs"
               secondary="Practice matching DNA base pairs!"
             />
-          </ListItem>
+          </ListItem> */}
         </List>
       </div>
     </div>
