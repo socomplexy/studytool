@@ -11,7 +11,7 @@ const units = {
 };
 
 export const simpleConversion = () => {
-  const substance = Utils.getRandomSelection(Data.substances);
+  const substance = Utils.getRandomObjectSelection(Data.substances);
   const mass = parseFloat((Utils.getRandomInt(1000) / 10).toFixed(4));
   const moles = parseFloat((mass / substance.totalMass).toFixed(4));
   const volume = Utils.getRandomInt(50) / 10;

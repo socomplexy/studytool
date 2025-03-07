@@ -55,9 +55,9 @@ export const views = [
         disabled: true,
       },
       {
-        label: "Half-Life",
+        label: "Activity & Half-Life",
         route: "half-life",
-        disabled: true,
+        disabled: false,
       },
     ],
   },

@@ -31,6 +31,7 @@ const Inner = ({ isLargeScreen, handleNavOpen }) => {
         path="/base-practice"
         element={<Views.DNABasePractice {...sharedProps} />}
       />
+      <Route path="/half-life" element={<Views.HalfLife {...sharedProps} />} />
       <Route path="/molarity" element={<Views.Molarity {...sharedProps} />} />
       <Route
         path="/understanding-molarity"
