@@ -3,12 +3,8 @@ import { Box, Tab, Tabs, Typography } from "@mui/material";
 import { HalfLifeChart } from "./HalfLifeChart";
 import { HalfLife as HalfLifeProblems } from "./HalfLife";
 import { Activity } from "./Activity";
-import { populateDataset } from "./halfLifeCalculations";
 
 export const HalfLife = ({ isLargeScreen, MenuIcon }) => {
-  const { activity, isotope, startingWeight, timeValue, dataset } =
-    populateDataset();
-
   const [tabView, setTabView] = useState(0);
   const updateTabView = (viewNo) => setTabView(viewNo);
   // 0 is half-life chart, 1 is half-life word problems, 2 is activity word problems
@@ -26,7 +22,7 @@ export const HalfLife = ({ isLargeScreen, MenuIcon }) => {
       <div className="content-wrapper">
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <Tabs value={tabView}>
+            <Tabs value={tabView} variant="scrollable" scrollButtons="auto">
               <Tab label="Interpreting Data" onClick={() => updateTabView(0)} />
               <Tab
                 label="Calculating Half-life"
@@ -39,33 +35,12 @@ export const HalfLife = ({ isLargeScreen, MenuIcon }) => {
             </Tabs>
           </Box>
           {tabView === 0 ? (
-            <HalfLifeChart
-              isLargeScreen={isLargeScreen}
-              isotope={isotope}
-              timeValue={timeValue}
-              dataset={dataset}
-            />
+            <HalfLifeChart isLargeScreen={isLargeScreen} />
           ) : null}
-          {tabView === 1 ? (
-            <HalfLifeProblems
-              isLargeScreen={isLargeScreen}
-              isotope={isotope}
-              timeValue={timeValue}
-              dataset={dataset}
-            />
-          ) : null}
-          {tabView === 2 ? (
-            <Activity
-              isLargeScreen={isLargeScreen}
-              isotope={isotope}
-              timeValue={timeValue}
-              dataset={dataset}
-            />
-          ) : null}
+          {tabView === 1 ? <HalfLifeProblems /> : null}
+          {tabView === 2 ? <Activity /> : null}
         </Box>
       </div>
     </div>
   );
 };
-
-// activity in Bq

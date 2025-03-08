@@ -11,7 +11,7 @@ export const LineChart = ({ dataset, isLargeScreen }) => {
           label: "Time passed (hours)",
         },
       ]}
-      yAxis={[{ label: "Weight (grams)" }]}
+      yAxis={[{ label: "Activity (kBq)" }]}
       series={[
         {
           dataKey: "y",
@@ -22,8 +22,8 @@ export const LineChart = ({ dataset, isLargeScreen }) => {
         },
       ]}
       tooltip={{ trigger: "axis" }}
-      width={isLargeScreen ? 450 : 300}
-      height={isLargeScreen ? 300 : 200}
+      width={isLargeScreen ? 600 : 350}
+      height={300}
       grid={{ vertical: true, horizontal: true }}
       sx={{
         [`.${axisClasses.left} .${axisClasses.label}`]: {

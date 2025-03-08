@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Box, Chip, Typography } from "@mui/material";
 import { Components } from "../../Components";
 import { Utils } from "../../utils";
+import { populateDataset } from "./halfLifeCalculations";
 
-export const HalfLifeChart = ({ isLargeScreen, isotope, dataset }) => {
+export const HalfLifeChart = ({ isLargeScreen }) => {
   const [answerVisible, setAnswerVisible] = useState(false);
   const toggleAnswerVisibility = (status) => setAnswerVisible(status);
 
@@ -12,17 +13,26 @@ export const HalfLifeChart = ({ isLargeScreen, isotope, dataset }) => {
 
   const getNewProblem = () => {
     toggleAnswerVisibility(false);
+    const problem = populateDataset();
 
+    const isotope = problem.isotope;
+    const dataset = problem.dataset;
     const integer = Utils.getRandomInt(4);
     const isOdd = integer % 2 === 1;
     const answer = isOdd
       ? `${isotope.halfLife} hours`
-      : `${isotope.halfLife * 0.5 ** (integer - 1)} Bq`;
+      : `${(
+          isotope.halfLife *
+          0.5 ** (integer - 1) *
+          1000
+        ).toLocaleString()} Bq`;
 
     handleSetData({
       integer,
       isOdd,
       answer,
+      isotope,
+      dataset,
     });
   };
 
@@ -34,16 +44,17 @@ export const HalfLifeChart = ({ isLargeScreen, isotope, dataset }) => {
         <>
           {data.isOdd ? (
             <Typography>
-              According to the graph, what is the half-life of {isotope.name}?
+              According to the graph, what is the half-life of{" "}
+              {data.isotope.name}?
             </Typography>
           ) : (
             <Typography>
-              According to the graph, how much of the remains at the{" "}
-              {Utils.getOrdinal(data.integer)} half-life of {isotope.name}?
+              According to the graph, what is the activity at the{" "}
+              {Utils.getOrdinal(data.integer)} half-life of {data.isotope.name}?
             </Typography>
           )}
 
-          <Box sx={{ mt: 3 }}>
+          <Box sx={{ mt: 3, display: "flex" }}>
             {!answerVisible ? (
               <Chip
                 label="Show Answer"
@@ -58,13 +69,13 @@ export const HalfLifeChart = ({ isLargeScreen, isotope, dataset }) => {
               />
             )}
             {answerVisible ? (
-              <Typography variant="h5" sx={{ mt: 3 }}>
+              <Typography variant="h5" color="error" sx={{ ml: 2 }}>
                 {data.answer}
               </Typography>
             ) : null}
           </Box>
           <Components.LineChart
-            dataset={dataset}
+            dataset={data.dataset}
             isLargeScreen={isLargeScreen}
           />
         </>

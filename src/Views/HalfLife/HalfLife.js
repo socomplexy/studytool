@@ -48,7 +48,7 @@ export const HalfLife = () => {
               />
             )}
             {answerVisible ? (
-              <Typography variant="h5" sx={{ mt: 3 }}>
+              <Typography variant="h5" color="error" sx={{ mt: 3 }}>
                 {`${
                   data.answer % 1 === 0
                     ? Math.round(data.answer).toLocaleString()
