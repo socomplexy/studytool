@@ -32,8 +32,11 @@ export const Activity = () => {
         <>
           <Typography>
             For a particular radioactive source{" "}
-            {data.startingNumber.toLocaleString()} atoms decay in a time of{" "}
-            {data.time} {data.timeUnits}. What is the activity of the source?
+            {data.startingNumber.toLocaleString(undefined, {
+              maximumFractionDigits: 2,
+            })}{" "}
+            atoms decay in a time of {data.time} {data.timeUnits}. What is the
+            activity of the source?
           </Typography>
 
           <Box sx={{ mt: 3 }}>
@@ -55,7 +58,9 @@ export const Activity = () => {
                 {`${
                   data.answer % 1 === 0
                     ? Math.round(data.answer).toLocaleString()
-                    : data.answer.toLocaleString()
+                    : data.answer.toLocaleString(undefined, {
+                        maximumFractionDigits: 2,
+                      })
                 } Bq`}
               </Typography>
             ) : null}

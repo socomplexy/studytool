@@ -17,15 +17,15 @@ export const HalfLifeChart = ({ isLargeScreen }) => {
 
     const isotope = problem.isotope;
     const dataset = problem.dataset;
+    const startingActivity = problem.startingActivity * 1000;
     const integer = Utils.getRandomInt(4);
     const isOdd = integer % 2 === 1;
     const answer = isOdd
       ? `${isotope.halfLife} hours`
-      : `${(
-          isotope.halfLife *
-          0.5 ** (integer - 1) *
-          1000
-        ).toLocaleString()} Bq`;
+      : // prettier-ignore
+        `${(startingActivity * 0.5 ** (integer)).toLocaleString(undefined, {
+          maximumFractionDigits: 2,
+        })} Bq`;
 
     handleSetData({
       integer,
@@ -33,6 +33,7 @@ export const HalfLifeChart = ({ isLargeScreen }) => {
       answer,
       isotope,
       dataset,
+      startingActivity,
     });
   };
 
@@ -50,7 +51,12 @@ export const HalfLifeChart = ({ isLargeScreen }) => {
           ) : (
             <Typography>
               According to the graph, what is the activity at the{" "}
-              {Utils.getOrdinal(data.integer)} half-life of {data.isotope.name}?
+              {Utils.getOrdinal(data.integer)} half-life of {data.isotope.name}{" "}
+              that started at{" "}
+              {data.startingActivity.toLocaleString(undefined, {
+                maximumFractionDigits: 2,
+              })}{" "}
+              Bq ?
             </Typography>
           )}
 

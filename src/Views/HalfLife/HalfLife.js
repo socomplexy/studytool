@@ -29,8 +29,11 @@ export const HalfLife = () => {
         <>
           <Typography>
             A radioactive chemical has an activity of{" "}
-            {data.startingNumber.toLocaleString()} Bq. What is the activity of
-            this chemical after {data.halfLives} half-lives have passed?
+            {data.startingNumber.toLocaleString(undefined, {
+              maximumFractionDigits: 2,
+            })}{" "}
+            Bq. What is the activity of this chemical after {data.halfLives}{" "}
+            half-lives have passed?
           </Typography>
 
           <Box sx={{ mt: 3 }}>
@@ -52,7 +55,9 @@ export const HalfLife = () => {
                 {`${
                   data.answer % 1 === 0
                     ? Math.round(data.answer).toLocaleString()
-                    : data.answer.toFixed(2).toLocaleString()
+                    : data.answer.toLocaleString(undefined, {
+                        maximumFractionDigits: 2,
+                      })
                 } Bq`}
               </Typography>
             ) : null}
