@@ -12,14 +12,16 @@ export const HalfLife = ({ isLargeScreen, MenuIcon }) => {
   return (
     <div className="view-wrapper">
       {!isLargeScreen ? MenuIcon : null}
-      <div className="banner home-banner">
-        <div className="content-wrapper">
-          <Typography variant="h1" color="text.primary" gutterBottom>
-            Half Life
-          </Typography>
-        </div>
-      </div>
+      <div className="banner home-banner"></div>
       <div className="content-wrapper">
+        <Typography
+          variant="h4"
+          component="h1"
+          color="text.secondary"
+          gutterBottom
+        >
+          Activity and Half Life
+        </Typography>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs value={tabView} variant="scrollable" scrollButtons="auto">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, Chip, Typography } from "@mui/material";
-import { Utils } from "../../utils";
+import { Utils } from "../../../utils";
 
 export const Activity = () => {
   const [answerVisible, setAnswerVisible] = useState(false);

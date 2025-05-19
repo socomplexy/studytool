@@ -21,14 +21,16 @@ export const Molarity = ({ isLargeScreen, MenuIcon }) => {
   return (
     <div className="view-wrapper">
       {!isLargeScreen ? MenuIcon : null}
-      <div className="banner molarity-banner">
-        <div className="content-wrapper">
-          <Typography variant="h1" color="#e3f2fd" gutterBottom>
-            Molarity
-          </Typography>
-        </div>
-      </div>
+      <div className="banner molarity-banner"></div>
       <div className="content-wrapper">
+        <Typography
+          variant="h4"
+          component="h1"
+          color="text.secondary"
+          gutterBottom
+        >
+          Molarity
+        </Typography>
         <Card sx={{ minWidth: 275, mb: 3 }}>
           <CardContent>
             <Typography variant="h5" component="div">

@@ -38,35 +38,12 @@ export const Drawer = ({ isLargeScreen, navOpen, handleNavClose }) => {
       )}
       {views.map((view, index) => (
         <List key={`drawer-list-${view.category}`} dense disablePadding>
-          {view.category === "Home" ? (
-            <ListItem disablePadding>
-              <ListItemButton onClick={() => navigateTo("")}>
-                <ListItemIcon>{view.icon}</ListItemIcon>
-                <ListItemText primary={view.category} />
-              </ListItemButton>
-            </ListItem>
-          ) : (
-            <ListItem>
-              {view.icon ? <ListItemIcon>{view.icon}</ListItemIcon> : null}
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigateTo(view.route)}>
+              <ListItemIcon>{view.icon}</ListItemIcon>
               <ListItemText primary={view.category} />
-            </ListItem>
-          )}
-
-          {view.categoryViews
-            ? view.categoryViews.map((v, i) => (
-                <ListItem key={`category-view-${v.route}`} disablePadding>
-                  <ListItemButton
-                    onClick={() => navigateTo(v.route)}
-                    disabled={v.disabled}
-                  >
-                    {v.icon ? <ListItemIcon>{v.icon}</ListItemIcon> : null}
-                    <ListItemText inset primary={v.label} />
-                  </ListItemButton>
-                </ListItem>
-              ))
-            : null}
-
-          {index !== views.length - 1 ? <Divider /> : null}
+            </ListItemButton>
+          </ListItem>
         </List>
       ))}
     </div>

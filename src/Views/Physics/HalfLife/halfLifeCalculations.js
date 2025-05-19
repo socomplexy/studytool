@@ -1,5 +1,5 @@
 import { decayRates } from "./data";
-import { Utils } from "../../utils";
+import { Utils } from "../../../utils";
 
 const getStartingActivity = () =>
   (Math.round(Utils.getRandomInt(1000000, 10000) / 100) * 100) / 1000;

@@ -26,7 +26,15 @@
     background-size: cover;
   }
   &.molarity-banner {
+    background: url("../../public/images/molarity.jpg");
+    background-size: cover;
+  }
+  &.chemistry-banner {
     background: url("../../public/images/chemistry.jpg");
+    background-size: cover;
+  }
+  &.physics-banner {
+    background: url("../../public/images/physics.jpg");
     background-size: cover;
   }
   .content-wrapper {
@@ -43,19 +51,20 @@
   }
 }
 
-h1 {
-  @media (max-width: 700px) {
-    font-size: 3.5rem !important;
-  }
-  @media (max-width: 400px) {
-    font-size: 2.5rem !important;
-  }
-}
-h2 {
-  @media (max-width: 700px) {
-    font-size: 2.25rem !important;
-  }
-  @media (max-width: 400px) {
-    font-size: 1.75rem !important;
-  }
-}
+// h1 {
+//   font-size: 4rem !important;
+//   @media (max-width: 700px) {
+//     font-size: 3.5rem !important;
+//   }
+//   @media (max-width: 400px) {
+//     font-size: 2.5rem !important;
+//   }
+// }
+// h2 {
+//   @media (max-width: 700px) {
+//     font-size: 2.25rem !important;
+//   }
+//   @media (max-width: 400px) {
+//     font-size: 1.75rem !important;
+//   }
+// }

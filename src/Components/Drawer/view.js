@@ -7,58 +7,21 @@ export const views = [
   {
     category: "Home",
     icon: <HomeIcon />,
+    route: "",
   },
   {
     category: "Biology",
     icon: <BiotechIcon />,
-    categoryViews: [
-      {
-        label: "DNA Base Pairs",
-        route: "base-pairs",
-        disabled: true,
-      },
-    ],
+    route: "biology",
   },
   {
     category: "Chemistry",
     icon: <HubIcon />,
-    categoryViews: [
-      {
-        label: "Chemical Equations",
-        route: "chemical-equations",
-        disabled: true,
-      },
-      {
-        label: "Molarity",
-        route: "molarity",
-        disabled: false,
-      },
-      {
-        label: "Molarity Practice",
-        route: "molarity-practice",
-        disabled: false,
-      },
-      {
-        label: "Understanding Molarity",
-        route: "understanding-molarity",
-        disabled: false,
-      },
-    ],
+    route: "chemistry",
   },
   {
     category: "Physics",
     icon: <WavesIcon />,
-    categoryViews: [
-      {
-        label: "Absorbed Dose",
-        route: "absorbed-dose",
-        disabled: true,
-      },
-      {
-        label: "Activity & Half-Life",
-        route: "half-life",
-        disabled: false,
-      },
-    ],
+    route: "physics",
   },
 ];

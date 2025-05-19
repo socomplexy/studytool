@@ -34,14 +34,16 @@ export const MolarityPractice = ({ isLargeScreen, MenuIcon }) => {
   return (
     <div className="view-wrapper">
       {!isLargeScreen ? MenuIcon : null}
-      <div className="banner molarity-banner">
-        <div className="content-wrapper">
-          <Typography variant="h1" color="#e3f2fd" gutterBottom>
-            Molarity Practice
-          </Typography>
-        </div>
-      </div>
+      <div className="banner molarity-banner"></div>
       <div className="content-wrapper">
+        <Typography
+          variant="h4"
+          component="h1"
+          color="text.secondary"
+          gutterBottom
+        >
+          Molarity Practice
+        </Typography>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs value={practiceLevel}>

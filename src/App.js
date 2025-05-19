@@ -27,20 +27,29 @@ const Inner = ({ isLargeScreen, handleNavOpen }) => {
 
   return (
     <Routes>
+      {/* ############ BIOLOGY ############ */}
+      <Route path="/biology" element={<Views.Biology {...sharedProps} />} />
       <Route
         path="/base-practice"
         element={<Views.DNABasePractice {...sharedProps} />}
       />
-      <Route path="/half-life" element={<Views.HalfLife {...sharedProps} />} />
+
+      {/* ############ CHEMISTRY ############ */}
+      <Route path="/chemistry" element={<Views.Chemistry {...sharedProps} />} />
       <Route path="/molarity" element={<Views.Molarity {...sharedProps} />} />
-      <Route
-        path="/understanding-molarity"
-        element={<Views.UnderstandingMolarity {...sharedProps} />}
-      />
       <Route
         path="/molarity-practice"
         element={<Views.MolarityPractice {...sharedProps} />}
       />
+      <Route
+        path="/understanding-molarity"
+        element={<Views.UnderstandingMolarity {...sharedProps} />}
+      />
+
+      {/* ############ PHYSICS ############ */}
+      <Route path="/physics" element={<Views.Physics {...sharedProps} />} />
+      <Route path="/half-life" element={<Views.HalfLife {...sharedProps} />} />
+
       <Route path="/" element={<Views.Home {...sharedProps} />} />
     </Routes>
   );

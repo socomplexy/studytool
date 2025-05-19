@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Chip, Typography } from "@mui/material";
-import { Components } from "../../Components";
-import { Utils } from "../../utils";
+import { Components } from "../../../Components";
+import { Utils } from "../../../utils";
 import { populateDataset } from "./halfLifeCalculations";
 
 export const HalfLifeChart = ({ isLargeScreen }) => {

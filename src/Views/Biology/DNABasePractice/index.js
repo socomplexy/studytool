@@ -1,15 +1,15 @@
 import { Box, Typography } from "@mui/material";
 import "./bases.scss";
 
-export const DNABasePractice = ({}) => {
-  const sharedStyles = {
-    lineHeight: 1.8,
-    width: "fit-content",
-    width: "40px",
-    padding: "2px 5px",
-    color: "white",
-    fontWeight: 600,
-  };
+export const DNABasePractice = () => {
+  // const sharedStyles = {
+  //   lineHeight: 1.8,
+  //   width: "fit-content",
+  //   width: "40px",
+  //   padding: "2px 5px",
+  //   color: "white",
+  //   fontWeight: 600,
+  // };
 
   return (
     <div className="view-wrapper">

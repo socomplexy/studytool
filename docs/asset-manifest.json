@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.a9b044a2.css",
-    "main.js": "./static/js/main.0c88d313.js",
-    "static/media/chemistry.jpg": "./static/media/chemistry.b01411da683eb01dcd26.jpg",
+    "main.css": "./static/css/main.d39b4191.css",
+    "main.js": "./static/js/main.f38f70a9.js",
+    "static/media/molarity.jpg": "./static/media/molarity.b01411da683eb01dcd26.jpg",
+    "static/media/chemistry.jpg": "./static/media/chemistry.09397e5986307990d087.jpg",
     "static/media/study.jpg": "./static/media/study.8ed7b6f9d63e8b1b5d2d.jpg",
+    "static/media/physics.jpg": "./static/media/physics.21b8f693563e198f5edc.jpg",
     "static/media/genetics.jpg": "./static/media/genetics.a43508a363cf883b6976.jpg",
     "index.html": "./index.html",
-    "main.a9b044a2.css.map": "./static/css/main.a9b044a2.css.map",
-    "main.0c88d313.js.map": "./static/js/main.0c88d313.js.map"
+    "main.d39b4191.css.map": "./static/css/main.d39b4191.css.map",
+    "main.f38f70a9.js.map": "./static/js/main.f38f70a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9b044a2.css",
-    "static/js/main.0c88d313.js"
+    "static/css/main.d39b4191.css",
+    "static/js/main.f38f70a9.js"
   ]
 }

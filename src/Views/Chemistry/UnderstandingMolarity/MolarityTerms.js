@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material";
 
-export const MolarityTerms = ({}) => {
+export const MolarityTerms = () => {
   const titleProps = {
-    variant: "h5",
-    sx: { color: "primary.main", mt: 4, fontWeight: 600 },
+    variant: "h6",
+    sx: { color: "secondary.main", mt: 4, fontWeight: 600 },
   };
   const subtitleProps = {
     variant: "subtitle2",
@@ -12,7 +12,7 @@ export const MolarityTerms = ({}) => {
 
   return (
     <Box sx={{ mt: 3 }}>
-      <Typography variant="h4" component="h3" gutterBottom>
+      <Typography variant="h5" component="h2" gutterBottom>
         Key Terms
       </Typography>
       <Typography>

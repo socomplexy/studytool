@@ -1,15 +1,24 @@
-import { DNABasePractice } from "./DNABasePractice";
-import { HalfLife } from "./HalfLife";
+import { Chemistry } from "./Chemistry";
+import { Biology } from "./Biology";
+import { Physics } from "./Physics";
 import { Home } from "./Home";
-import { Molarity } from "./Molarity";
-import { MolarityPractice } from "./MolarityPractice";
-import { UnderstandingMolarity } from "./UnderstandingMolarity";
 
 export const Views = {
-  DNABasePractice,
-  HalfLife,
   Home,
-  Molarity,
-  MolarityPractice,
-  UnderstandingMolarity,
+
+  // Biology
+  Biology: Biology.Biology,
+  DNABasePractice: Biology.DNABasePractice,
+
+  // Chemistry
+  Chemistry: Chemistry.Chemistry,
+  Molarity: Chemistry.Molarity,
+  MolarityPractice: Chemistry.MolarityPractice,
+  UnderstandingMolarity: Chemistry.UnderstandingMolarity,
+
+  // Physics
+  Physics: Physics.Physics,
+  HalfLife: Physics.HalfLife,
+
+  // Maths
 };

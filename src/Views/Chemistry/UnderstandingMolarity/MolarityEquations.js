@@ -1,13 +1,13 @@
 import { Box, Typography } from "@mui/material";
 
-export const MolarityEquations = ({}) => {
+export const MolarityEquations = () => {
   const titleProps = {
-    variant: "h5",
+    variant: "h6",
     sx: { color: "warning.main", mt: 4, fontWeight: 600 },
   };
   return (
     <Box sx={{ mt: 3 }}>
-      <Typography variant="h4" component="h3" gutterBottom>
+      <Typography variant="h5" component="h2" gutterBottom>
         Important equations
       </Typography>
       <Typography sx={{ mb: 1.5 }}>

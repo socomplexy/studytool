@@ -1,5 +1,5 @@
-import { Utils } from "../../utils";
-import { Data } from "../../data";
+import { Utils } from "../../../utils";
+import { Data } from "../../../data";
 
 const units = {
   concentration: "M",
