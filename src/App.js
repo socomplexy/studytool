@@ -2,6 +2,7 @@ import { useState, useLayoutEffect } from "react";
 import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./Styles/App.scss";
+import "./Styles/Images.scss";
 import { Components } from "./Components";
 import { Utils } from "./utils";
 import { Views } from "./Views";
@@ -32,6 +33,10 @@ const Inner = ({ isLargeScreen, handleNavOpen }) => {
       <Route
         path="/base-practice"
         element={<Views.DNABasePractice {...sharedProps} />}
+      />
+      <Route
+        path="/percentage-change"
+        element={<Views.PercentageChange {...sharedProps} />}
       />
 
       {/* ############ CHEMISTRY ############ */}

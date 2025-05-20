@@ -1,4 +1,5 @@
 import { DNABasePractice } from "./DNABasePractice";
+import { PercentageChange } from "./PercentageChange";
 import {
   Divider,
   List,
@@ -6,13 +7,13 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const BiologyHome = ({ isLargeScreen, MenuIcon }) => {
-  // const listItemProps = {
-  //   component: Link,
-  //   style: { textDecoration: "none" },
-  // };
+  const listItemProps = {
+    component: Link,
+    style: { textDecoration: "none" },
+  };
 
   return (
     <div className="view-wrapper">
@@ -58,13 +59,13 @@ const BiologyHome = ({ isLargeScreen, MenuIcon }) => {
         </List>
         <Divider sx={{ mt: 2, mb: 3 }} />
         <List>
-          {/* <ListItem {...listItemProps} to="/base-pairs">
+          <ListItem {...listItemProps} to="/percentage-change">
             <ListItemText
-              primary="Base Pairs in DNA/RNA"
-              secondary="Learn the base pairs present in DNA and RNA"
+              primary="Percentage Change"
+              secondary="Learn how to calculate percentage change, with unlimited practice examples."
             />
           </ListItem>
-          <Divider variant="inset" component="li" /> */}
+          {/* <Divider variant="inset" component="li" /> */}
           {/* <ListItem {...listItemProps} to="/hereditary-tress">
             <ListItemText
               primary="Hereditary Trees"
@@ -95,4 +96,5 @@ const BiologyHome = ({ isLargeScreen, MenuIcon }) => {
 export const Biology = {
   Biology: BiologyHome,
   DNABasePractice,
+  PercentageChange,
 };

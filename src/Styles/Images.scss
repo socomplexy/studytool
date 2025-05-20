@@ -1,0 +1,38 @@
+.percentage-change-formula {
+  background: url("../../public/images/percentage-change-formula.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 170px;
+  width: 500px;
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+}
+.percentage-change-loo {
+  background: url("../../public/images/loo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  width: 275px;
+  margin: auto;
+}
+.percentage-change-empty {
+  background: url("../../public/images/PCE-empty.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 115px;
+  width: 500px;
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+}
+.percentage-change-filled {
+  background: url("../../public/images/PCE-filled.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 115px;
+  width: 500px;
+  @media (max-width: 550px) {
+    width: 100%;
+  }
+}

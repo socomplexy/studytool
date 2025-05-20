@@ -8,6 +8,7 @@ export const Views = {
 
   // Biology
   Biology: Biology.Biology,
+  PercentageChange: Biology.PercentageChange,
   DNABasePractice: Biology.DNABasePractice,
 
   // Chemistry
