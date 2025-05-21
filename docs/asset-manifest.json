@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.fb49ac6e.css",
-    "main.js": "./static/js/main.8b6cffdc.js",
+    "main.css": "./static/css/main.067e579a.css",
+    "main.js": "./static/js/main.7ce62cd0.js",
     "static/media/molarity.jpg": "./static/media/molarity.b01411da683eb01dcd26.jpg",
     "static/media/chemistry.jpg": "./static/media/chemistry.09397e5986307990d087.jpg",
     "static/media/study.jpg": "./static/media/study.8ed7b6f9d63e8b1b5d2d.jpg",
@@ -11,11 +11,11 @@
     "static/media/PCE-filled.jpg": "./static/media/PCE-filled.e08591e8204cf5362492.jpg",
     "static/media/PCE-empty.jpg": "./static/media/PCE-empty.78a8a20799a07503dcac.jpg",
     "index.html": "./index.html",
-    "main.fb49ac6e.css.map": "./static/css/main.fb49ac6e.css.map",
-    "main.8b6cffdc.js.map": "./static/js/main.8b6cffdc.js.map"
+    "main.067e579a.css.map": "./static/css/main.067e579a.css.map",
+    "main.7ce62cd0.js.map": "./static/js/main.7ce62cd0.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb49ac6e.css",
-    "static/js/main.8b6cffdc.js"
+    "static/css/main.067e579a.css",
+    "static/js/main.7ce62cd0.js"
   ]
 }

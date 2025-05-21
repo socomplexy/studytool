@@ -1,6 +1,15 @@
 .dna-base-pairs {
   display: flex;
   margin-top: 5px;
+  &.options {
+    .dna-bases {
+      margin: 0 0 0 auto;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 
 .dna-bases {

@@ -63,8 +63,6 @@ export const PercentageChangePractice = () => {
           ) : null}
         </CardContent>
       </Card>
-
-      {/* <Typography>{data ? data.question : null}</Typography> */}
     </Box>
   );
 };
